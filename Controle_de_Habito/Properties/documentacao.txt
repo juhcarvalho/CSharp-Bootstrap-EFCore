@@ -1,3 +1,7 @@
-Imagens de https://www.freepik.com/
+Imagens (https://www.freepik.com/)
 https://www.freepik.com/vectors/healthy-lifestyle
 https://www.freepik.com/vectors/strength-icon
+
+Github (https://github.com/juhcarvalho/Controle_de_Habito)
+
+Bootstrap (https://getbootstrap.com/docs/5.2/content/images/)
