@@ -5,3 +5,6 @@ https://www.freepik.com/vectors/strength-icon
 Github (https://github.com/juhcarvalho/Controle_de_Habito)
 
 Bootstrap (https://getbootstrap.com/docs/5.2/content/images/)
+
+Editor de imagens
+https://pixlr.com/br/x/#editor

@@ -14,5 +14,26 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background: url(/img/habito_2.png);
+    /* 
+    background-repeat: repeat-x;
+    background-repeat: no-repeat, no-repeat;
+    background-position-y: center;*/
 }
+
+.tablegrid {
+    background-color: white;
+    opacity:0.98;
+    padding: 20px;
+}
+
+.tablegrid table caption {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: white;
+}
+
