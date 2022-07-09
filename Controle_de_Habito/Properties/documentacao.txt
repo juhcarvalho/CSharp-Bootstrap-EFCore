@@ -8,3 +8,5 @@ Bootstrap (https://getbootstrap.com/docs/5.2/content/images/)
 
 Editor de imagens
 https://pixlr.com/br/x/#editor
+
+https://trello.com/b/aNqMWPlP/projeto-controle-de-habito

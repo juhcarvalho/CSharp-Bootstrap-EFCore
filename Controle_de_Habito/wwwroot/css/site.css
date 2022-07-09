@@ -22,16 +22,24 @@ body {
     background-position-y: center;*/
 }
 
-.tablegrid {
+
+div.tablegrid {
     background-color: white;
-    opacity:0.98;
+    opacity: 0.98;
     padding: 20px;
+    min-height: 400px;
+    text-align: left;
 }
 
 .tablegrid table caption {
     font-size: 20px;
     font-weight: bold;
 }
+
+.tablegrid table tbody, thead {
+    text-align: left;
+}
+
 
 .footer {
     background-color: white;
