@@ -1,13 +1,13 @@
 ﻿using Controle_de_Habito.Data;
 using Controle_de_Habito.Models;
 using Controle_de_Habito.Repository;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Controle_de_Habito.UnitOfWork
 {
     public class UnitOfWorkApp : DbContext
     {
-        ContextApp context = new ContextApp();
+        ContextApp context;// = new ContextApp();
         Repository<Habito> habitoRepository;
 
         public Repository<Habito> HabitoRepository 
@@ -21,7 +21,7 @@ namespace Controle_de_Habito.UnitOfWork
 
         public void Commit()
         {
-            context.SaveChanges();
+           // context.SaveChanges();
         }
 
     }

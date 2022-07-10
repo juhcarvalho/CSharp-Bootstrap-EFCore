@@ -6,10 +6,8 @@ namespace Controle_de_Habito.Controllers
 {
     public class HabitoController : Controller
     {
-        UnitOfWork.UnitOfWorkApp _uow;
         public HabitoController()
         {
-            _uow = new UnitOfWork.UnitOfWorkApp();
         }
         
         // GET: Habito

@@ -1,39 +1,65 @@
-﻿@{
-    ViewData["Title"] = "Habito";
+﻿@model IEnumerable<Controle_de_Habito.Models.Habito>
+
+@{
+    ViewData["Title"] = "Index";
 }
 
-<div class="tablegrid">
-   <div class="table-responsive">
-        <table class="table caption-top">
-          <caption>Meus hábitos</caption>
-          <thead class="table-dark">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nome</th>
-              <th scope="col">Objetivo</th>
-              <th scope="col">Data de início</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Estudar Java 1h por dia</td>
-              <td>Concluir trabalho de Estrutura </td>
-              <td>20/07/2022</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Caminhar 3x na semana</td>
-              <td>Tomar sol e práticar atividade física</td>
-              <td>01/02/2022</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Beber 2L de água</td>
-              <td>Manter hidratação</td>
-              <td>03/01/2022</td>
-            </tr>
-          </tbody>
-      </table>
-    </div>
-</div>
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Objetivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dias)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Horario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataInicio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Objetivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dias)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Horario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInicio)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
