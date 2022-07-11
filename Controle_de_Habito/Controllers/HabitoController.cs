@@ -1,88 +1,21 @@
-﻿using Controle_de_Habito.Models;
-using Microsoft.AspNetCore.Http;
+﻿using Controle_de_Habito.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Controle_de_Habito.Controllers
 {
     public class HabitoController : Controller
     {
-        public HabitoController()
+        private readonly IHabitoRepository _habitoRepository;
+
+        public HabitoController(IHabitoRepository habitoRepository)
         {
-        }
-        
-        // GET: Habito
-        public ActionResult Index()
-        {
-            return View();
+            _habitoRepository = habitoRepository;
         }
 
-        // GET: Habito/Details/5
-        public ActionResult Details(int id)
+        public IActionResult Index()
         {
-            return View();
-        }
-
-        // GET: Habito/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Habito/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(Habito habito)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Habito/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Habito/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, Habito habito)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Habito/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Habito/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, Habito habito)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            var habitos = _habitoRepository.Habitos;
+            return View(habitos);
         }
     }
 }

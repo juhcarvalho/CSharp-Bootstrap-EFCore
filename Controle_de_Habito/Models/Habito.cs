@@ -21,6 +21,7 @@ namespace Controle_de_Habito.Models
 
         public DateTime Horario { get; set; }
 
+        [Display(Name = "Data ínicio")]
         public DateTime? DataInicio { get; set; }
 
     }

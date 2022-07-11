@@ -11,6 +11,6 @@ namespace Controle_de_Habito.Data
                 
         }
 
-        public virtual DbSet<Habito> Habito { get; set; }
+        public virtual DbSet<Habito> Habitos { get; set; }
     }
 }
